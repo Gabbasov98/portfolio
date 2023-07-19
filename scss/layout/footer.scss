@@ -1,0 +1,185 @@
+.footer{
+  margin-top: 6em;
+  padding: 12.5em 0 5.88em;
+  color: #fff;
+  background: #222;
+  &__middle{
+    margin-top: 12.5em;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__bottom{
+    margin-top: 8em;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.consult{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.consult-info{
+  width: 29em;
+  @include grid100gap(1.5em);
+  a{
+    text-decoration: underline;
+  }
+  .text18{
+    max-width: 95%;
+  }
+}
+
+.consult-form{
+  width: 29.375em;
+  display: grid;
+  grid-template-columns: repeat(2,calc(50% - .22em));
+  gap: .44em;
+  ._full{
+    grid-column: 1/-1;
+  }
+  &__btn{
+    width: 100%;
+    height: 3.125em;
+    background-color: $primary;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding: 0 1.13em;
+    font-weight: 700;
+    letter-spacing: 0.075em;
+    span{
+      font-size: .75em;
+      line-height: 120%;
+    }
+    img{
+      width: .875em;
+    }
+    &:hover{
+      background-color: darken($primary,10%);
+    }
+  }
+}
+
+.fg{
+  input,
+  textarea{
+    font-size: .9375em;
+    line-height: 130%;
+    padding: 0 1em;
+    height: 3.33em;
+    width: 100%;
+    background: rgba(241, 241, 241, 0.10);
+    border: 1px solid transparent;
+    color: #fff;
+    &::placeholder{
+      color: #838383;
+    }
+    &:focus{
+      border-color: $primary;
+    }
+  }
+  textarea{
+    resize: none;
+    height: 9em;
+    padding: 1em;
+  }
+}
+
+.footer-nav{
+  display: flex;
+  &__links{
+    @include lastM(0 9.12em 0 0);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__link{
+    font-size: .9375em;
+    line-height: 200%;
+    color: $gray;
+  }
+}
+
+.footer-contacts{
+  &__email{
+    font-size: 1.3125em;
+    line-height: 143%;
+    text-decoration: underline;
+  }
+  &__street{
+    margin-top: .5em;
+    font-size: .9375em;
+    line-height: 200%;
+    color: $gray;
+  }
+  .social{
+    margin-top: 1.44em;
+    &__item{
+      margin: 0 1em 0 0;
+      opacity: .8;
+      width: 2.8125em;
+    }
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .footer{
+    margin-top: 2em;
+    padding: 4em 0 2em;
+    &__middle,
+    &__bottom{
+      margin-top: 3em;
+    }
+  }
+
+  .footer-nav{
+    &__links{
+      @include lastM(0 4em 0 0);
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px){
+  .footer{
+    &__middle{
+      display: block;
+    }
+    &__bottom{
+      display: block;
+      .text18{
+        margin-top: 1em;
+      }
+    }
+  }
+
+  .consult{
+    display: block;
+  }
+
+  .consult-info{
+    width: 100%;
+  }
+
+  .consult-form{
+    margin-top: 2em;
+    width: 100%;
+  }
+
+  .footer-nav{
+    display: grid;
+    grid-template-columns: repeat(2,calc(50% - .75em));
+    gap: 1.5em;
+    margin-bottom: 2em;
+    &__links{
+      margin: 0 !important;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.text48{
+  font-size: 3em;
+  line-height: 109%;
+  font-weight: 900;
+}
+
+.text32{
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.text18{
+  font-size: 1.125em;
+  line-height: 150%;
+}
+
+.subtitle{
+  font-size: 1em;
+  line-height: 169%;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+
+@media screen and (max-width: 992px){
+  .text48{
+    font-size: 2em;
+  }
+}
